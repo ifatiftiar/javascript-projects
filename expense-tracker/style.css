@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(90deg, #00c9ff 0%, #92fe9d 100%);
+    font-weight: 700;
+}
+
+.expense-tracker {
+    margin: 1.5rem 0;
+    width: 90%;
+    max-width: 350px;
+    background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+}
+
+.bg-success {
+    background: #23c754 !important;
+}
+
+.bg-danger {
+    background: #ff3c00d7 !important;
+}
+
+.hide {
+    display: none;
+}

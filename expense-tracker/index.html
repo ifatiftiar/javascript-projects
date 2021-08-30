@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        />
+        <script
+            src="https://kit.fontawesome.com/73ca237c1a.js"
+            crossorigin="anonymous"
+        ></script>
+        <link rel="stylesheet" href="style.css" />
+        <script defer src="app.js"></script>
+        <title>Expense Tracker 2.0</title>
+    </head>
+    <body>
+        <div class="expense-tracker shadow p-4 rounded mx-auto">
+            <h2 class="py-2">Expense Tracker</h2>
+            <h4>Your balance</h4>
+            <h1 id="balance">$0.00</h1>
+            <div class="shadow p-2 d-flex justify-content-between">
+                <div class="border-end border-dark flex-grow-1 text-center">
+                    <h4>Income</h4>
+                    <p id="income" class="text-success">$0.00</p>
+                </div>
+                <div class="flex-grow-1 text-center">
+                    <h4>Expense</h4>
+                    <p id="expense" class="text-danger">$0.00</p>
+                </div>
+            </div>
+            <div class="py-3">
+                <h3 class="border-bottom border-dark pb-2">History</h3>
+                <ul class="list-group" id="history"></ul>
+            </div>
+            <div>
+                <h3 class="border-bottom border-dark pb-2">
+                    Add to transaction
+                </h3>
+                <form id="form">
+                    <div class="mb-3">
+                        <label for="text" class="form-label">Enter text</label>
+                        <input
+                            type="text"
+                            name="text"
+                            id="text"
+                            class="form-control"
+                            placeholder="Enter text..."
+                            autocomplete="off"
+                            required
+                        />
+                    </div>
+                    <div class="mb-3">
+                        <label for="amount" class="form-label"
+                            >Enter Amount <br />
+                            (Use positive number for income and negative number
+                            for expense)
+                        </label>
+                        <input
+                            type="number"
+                            name="amount"
+                            id="amount"
+                            class="form-control"
+                            placeholder="Enter amount..."
+                            autocomplete="off"
+                            required
+                        />
+                    </div>
+                    <div>
+                        <input
+                            class="btn btn-primary btn-block"
+                            type="submit"
+                            value="Add transaction"
+                        />
+                    </div>
+                </form>
+                <button id="edit-btn" class="btn btn-danger hide">
+                    Edit transaction
+                </button>
+            </div>
+        </div>
+    </body>
+</html>
